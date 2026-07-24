@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import CreateArea from './../CreateArea/CreateArea.jsx';
 import NotesContainer from './../NotesContainer/NotesContainer.jsx';
 
@@ -9,17 +11,18 @@ function Content() {
     function addNote(note) {
         // Just append the new node to the notes array
         setNotes(prev => [...prev, note]);
+        return true;
     }
 
-    function deleteNode(id) {
+    function deleteNote(id) {
         // Filter out the note with the given id
         setNotes(prev => prev.filter(note => note.id !== id));
     }
 
     return (
         <>
-            <CreateArea addNote={addNote}/>
-            <NotesContainer deleteNode={deleteNode}/>
+            <CreateArea addNote={addNote} />
+            <NotesContainer notes={notes} deleteNode={deleteNote} />
         </>
     );
 }
