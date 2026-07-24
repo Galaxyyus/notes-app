@@ -1,6 +1,6 @@
 import Note from './../Note/Note.jsx';
 
-import 'NotesContainer.css';
+import './NotesContainer.css';
 
 function NotesContainer(props) {
     return (
