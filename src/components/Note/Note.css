@@ -1,0 +1,55 @@
+.note-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+#content>div:not(:first-child):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.09);
+}
+
+#content>div:not(:first-child) h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0f172a;
+    word-break: break-word;
+}
+
+#content>div:not(:first-child) p {
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+#content>div:not(:first-child) button {
+    align-self: flex-end;
+    background: transparent;
+    color: #ef4444;
+    border: 1px solid #fca5a5;
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#content>div:not(:first-child) button:hover {
+    background: #fef2f2;
+    color: #dc2626;
+    border-color: #f87171;
+}

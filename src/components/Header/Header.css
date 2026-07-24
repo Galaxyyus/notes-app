@@ -5,5 +5,16 @@ header {
     flex: 0 1 auto;
 
     text-align: left;
-    font-size: 1rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #3b2a00;
+    letter-spacing: -0.02em;
+
+    background-color: #facc15;
+
+    padding: 1.5rem 2.5rem;
+
+    box-shadow: inset 0 -12px 20px -4px rgba(202, 138, 4, 0.45),
+        inset 0 2px 4px rgba(255, 255, 255, 0.7),
+        0 8px 24px -4px rgba(0, 0, 0, 0.12);
 }

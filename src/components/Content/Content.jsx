@@ -20,10 +20,10 @@ function Content() {
     }
 
     return (
-        <>
+        <div id='content'>
             <CreateArea addNote={addNote} />
             <NotesContainer notes={notes} deleteNode={deleteNote} />
-        </>
+        </div>
     );
 }
 
