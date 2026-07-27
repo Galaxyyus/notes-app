@@ -2,3 +2,4 @@
 - Manage header css in a cleaner manner
 - Empty Notes check
 - Improve the Content part of the App
+- Imporve the class names for the notes related components

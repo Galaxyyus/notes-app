@@ -2,7 +2,7 @@ import './Note.css';
 
 function Note(props) {
     return (
-        <div>
+        <div className='note__div'>
             <h3>{props.title}</h3>
             <p>{props.text}</p>
             <button onClick={() => { props.deleteNote(props.id); }}>Delete</button>
