@@ -8,6 +8,7 @@
   "main": "man.js",
   "scripts": {
     "build": "npm install && cd ../client && npm install && npm run build",
+    "deploy": "node main.js",
     "start": "node --env-file=.env main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
