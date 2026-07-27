@@ -7,6 +7,7 @@
   "type": "module",
   "main": "man.js",
   "scripts": {
+    "build": "cd ../client && npm install && npm run build",
     "start": "node --env-file=.env main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
