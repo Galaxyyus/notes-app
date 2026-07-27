@@ -5,7 +5,8 @@ function CreateArea(props) {
     const [data, setData] = useState({ title: '', text: '' });
 
     function changeHandler(event) {
-        const { name, value } = event.target;
+        let { name, value } = event.target;
+        value = value.trim();
 
         setData(prev => ({
             ...prev,
@@ -15,14 +16,9 @@ function CreateArea(props) {
 
     function clickHandler(event) {
         event.preventDefault();
-        if (!data.title.trim() && !data.text.trim()) return;
+        if (!data.title && !data.text) return;
 
-        const newNote = {
-            ...data,
-            id: Date.now()
-        };
-
-        if (props.addNote(newNote)) {
+        if (props.addNote(data)) {
             setData({ title: '', text: '' });
         }
     }

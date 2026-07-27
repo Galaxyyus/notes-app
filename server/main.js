@@ -24,8 +24,8 @@ app.get("/notes", async (req, res) => {
 
 app.post("/notes", async (req, res) => {
     try {
-        const { title, content } = req.body;
-        const result = await notes.insertOne({ title: title, content: content });
+        const { title, text } = req.body;
+        const result = await notes.insertOne({ title: title, text: text });
 
         res.status(201).send(result.insertedId);
     } catch (err) {
