@@ -28,25 +28,26 @@ function CreateArea(props) {
     }
 
     return (
-        <form className="create-note-card">
+        <div id="input-div">
             <input
                 name="title"
-                id="note-title-input"
+                id="title-input"
                 placeholder="Title"
                 value={data.title}
                 onChange={changeHandler}
                 autoComplete="off"
             />
+            <hr />
             <textarea
                 name="text"
-                id="note-text-input"
+                id="text-input"
                 rows="3"
                 placeholder="Take a note..."
                 value={data.text}
                 onChange={changeHandler}
-            ></textarea>
-            <button type="submit" onClick={clickHandler}>Add Note</button>
-        </form>
+            />
+            <button onClick={clickHandler}>Add Note</button>
+        </div>
     );
 }
 

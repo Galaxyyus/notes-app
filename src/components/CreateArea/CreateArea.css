@@ -1,0 +1,73 @@
+#input-div {
+    width: 80%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-div #title-input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+    padding: 0.6rem 0.75rem;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
+    background: #fafafa;
+    color: #1e293b;
+
+    resize: none;
+}
+
+#input-div hr {
+    width: 100%;
+    margin: 0;
+    color: #1e293b;
+}
+
+#input-div #text-input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+    padding: 0.6rem 0.75rem;
+
+    font-size: 1rem;
+    font-family: inherit;
+    line-height: 1.5;
+
+    color: #334155;
+    background: #fafafa;
+
+    resize: none;
+}
+
+#input-div button {
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.4rem;
+
+    background-color: #facc15;
+    color: #3b2a00;
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.35);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#input-div button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(234, 179, 8, 0.45);
+
+    background-color: #eab308;
+}

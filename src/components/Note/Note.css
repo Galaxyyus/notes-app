@@ -13,12 +13,12 @@
     overflow: hidden;
 }
 
-#content>div:not(:first-child):hover {
+#content > div:not(:first-child):hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.09);
 }
 
-#content>div:not(:first-child) h3 {
+#content > div:not(:first-child) h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.15rem;
     font-weight: 600;
@@ -26,7 +26,7 @@
     word-break: break-word;
 }
 
-#content>div:not(:first-child) p {
+#content > div:not(:first-child) p {
     margin: 0 0 1rem 0;
     font-size: 0.95rem;
     color: #475569;
@@ -35,7 +35,7 @@
     white-space: pre-wrap;
 }
 
-#content>div:not(:first-child) button {
+#content > div:not(:first-child) button {
     align-self: flex-end;
     background: transparent;
     color: #ef4444;
@@ -48,7 +48,7 @@
     transition: all 0.2s ease;
 }
 
-#content>div:not(:first-child) button:hover {
+#content > div:not(:first-child) button:hover {
     background: #fef2f2;
     color: #dc2626;
     border-color: #f87171;
