@@ -7,10 +7,10 @@
   "type": "module",
   "main": "man.js",
   "scripts": {
-    "build": "npm install && cd ../client && npm install && npm run build",
-    "deploy": "node main.js",
-    "start": "node --env-file=.env main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "npm install",
+    "build": "npm run build --prefix ../client",
+    "dev": "node --env-file=.env main.js",
+    "start": "node main.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
