@@ -9,7 +9,7 @@ function Content() {
     const [notes, setNotes] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/notes")
+        fetch("/notes")
             .then(res => res.json())
             .then(data => setNotes(data));
     }, []);
@@ -18,7 +18,7 @@ function Content() {
         if (Object.values(note).every((value) => value === "")) {
             return;
         } else {
-            const response = await fetch("http://localhost:3001/notes", {
+            const response = await fetch("/notes", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -42,7 +42,7 @@ function Content() {
     }
 
     async function deleteNote(id) {
-        await fetch(`http://localhost:3001/notes/${id}`, {
+        await fetch(`/notes/${id}`, {
             method: "DELETE"
         });
 
