@@ -4,14 +4,14 @@ import './NotesContainer.css';
 
 function NotesContainer(props) {
     return (
-        <div class="notes-container">
+        <div className="notes-container">
             {props.notes.map(note =>
                 <Note
-                    key={note.id}
-                    id={note.id}
+                    key={note._id}
+                    id={note._id}
                     title={note.title}
                     text={note.text}
-                    deleteNode={props.deleteNode}
+                    deleteNote={props.deleteNote}
                 />)}
         </div>
     );
