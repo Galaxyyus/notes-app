@@ -12,6 +12,12 @@ console.log('Connected to MongoDB successfully!!');
 
 const notes = client.db("Keeper").collection("notes");
 
+app.use(express.static("./public"))
+
+app.get("/", (req, res) => {
+    res.status(200).sendFile("./public/index.html")
+})
+
 app.get("/notes", async (req, res) => {
     res.json(await notes.find().toArray());
 });
