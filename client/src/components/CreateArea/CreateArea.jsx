@@ -6,7 +6,6 @@ function CreateArea(props) {
 
     function changeHandler(event) {
         let { name, value } = event.target;
-        value = value.trim();
 
         setData(prev => ({
             ...prev,

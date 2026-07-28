@@ -15,6 +15,9 @@ function Content() {
     }, []);
 
     async function addNote(note) {
+        note.title = note.title.trim();
+        note.text = note.text.trim();
+
         if (Object.values(note).every((value) => value === "")) {
             return;
         } else {
