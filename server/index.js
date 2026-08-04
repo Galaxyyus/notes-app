@@ -1,10 +1,18 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 import express from "express";
 import { MongoClient, ObjectId } from "mongodb";
 import cors from 'cors';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
+
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 const client = new MongoClient(process.env.MONGO_URI);
 await client.connect();
@@ -12,11 +20,9 @@ console.log('Connected to MongoDB successfully!!');
 
 const notes = client.db("Keeper").collection("notes");
 
-app.use(express.static("./public"))
-
 app.get("/", (req, res) => {
-    res.status(200).sendFile("./public/index.html")
-})
+    res.status(200).sendFile("./public/index.html");
+});
 
 app.get("/notes", async (req, res) => {
     res.json(await notes.find().toArray());

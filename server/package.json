@@ -1,20 +1,21 @@
 {
   "name": "server",
+  "description": "The backend server for the notes-app",
   "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
+  "private": true,
   "type": "module",
-  "main": "man.js",
   "scripts": {
     "prebuild": "npm install",
-    "build": "npm run build --prefix ../client",
-    "dev": "node --env-file=.env main.js",
-    "start": "node main.js"
+    "build": "",
+    "dev": "node --env-file=.env index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mongodb": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
