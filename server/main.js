@@ -40,4 +40,4 @@ app.delete("/notes/:id", async (req, res) => {
     res.sendStatus(204);
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000);
